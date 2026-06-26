@@ -245,6 +245,36 @@
   /* ========== JADWAL ========== */
   #jadwal { background: linear-gradient(135deg, #0d1845, #182168 50%, #1A499A); position: relative; overflow: hidden; }
   #jadwal::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/g%3E%3C/svg%3E"); }
+   .timeline-group{
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.timeline-heading{
+    position: relative;
+    margin: 10px 0 20px;
+    margin-left: -60px;   /* agar sejajar dengan garis timeline */
+    padding-left: 45px;
+    color: #FAC016;
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+.timeline-heading::before{
+    content:"";
+    position:absolute;
+    left:11px;
+    top:50%;
+    transform:translateY(-50%);
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#FAC016;
+    border:3px solid #0d1845;
+    box-shadow:0 0 0 4px rgba(250,192,22,.2);
+    z-index:2;
+}
   .timeline { position: relative; padding-left: 60px; }
   .timeline::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #FAC016, #8DC341, #4D99D3, transparent); border-radius: 2px; }
   .tl-item { position: relative; margin-bottom: 32px; }
@@ -893,33 +923,63 @@ document.getElementById('lightbox').addEventListener('click', e => { if(e.target
 
 // TIMELINE
 const jadwalData = [
-  { day:'10', month:'Jun', time:'08.00 WIB', name:'Pembukaan Pendaftaran', loc:'Online — hmkg79.bmkg.go.id', status:'upcoming' },
-  { day:'01', month:'Jul', time:'23.59 WIB', name:'Batas Akhir Pendaftaran', loc:'Online', status:'upcoming' },
-  { day:'05', month:'Jul', time:'09.00 WIB', name:'Technical Meeting', loc:'Zoom / Google Meet', status:'upcoming' },
-  { day:'14', month:'Jul', time:'08.00 WIB', name:'Opening Ceremony & Seminar Nasional', loc:'Auditorium BMKG, Jakarta', status:'highlight' },
-  { day:'15', month:'Jul', time:'08.00 WIB', name:'Pelaksanaan Lomba Hari 1', loc:'BMKG Pusat & Online', status:'upcoming' },
-  { day:'16', month:'Jul', time:'08.00 WIB', name:'Pelaksanaan Lomba Hari 2', loc:'BMKG Pusat & Online', status:'upcoming' },
-  { day:'18', month:'Jul', time:'10.00 WIB', name:'Pengumuman Pemenang', loc:'Live Streaming', status:'upcoming' },
-  { day:'21', month:'Jul', time:'09.00 WIB', name:'Awarding Ceremony & Penutupan', loc:'Auditorium BMKG, Jakarta', status:'highlight' },
+  { day:'21', month:'Jul', time:'07.45 WIB', name:'Pembukaan Acara HMKG Upacara HMKG', loc:'Kantor Pusat BMKG', status:'highlight' },
+  { day:'21', month:'Jul', time:'08.00 WIB', name:'Bazzar HMKG', loc:'Kantor Pusat BMKG', status:'upcoming' },
+  { day:'21', month:'Jul', time:'08.00 WIB', name:'Pelaksanaan Perlombaan HMKG Hari ke-1', loc:'Kantor BMKG Pusat', status:'upcoming' },
+  { day:'22', month:'Jul', time:'08.00 WIB', name:'Jalan Sehat & Senam Bersama', loc:'Kantor Pusat BMKG', status:'upcoming' },
+  { day:'14', month:'Agust', time:'08.00 WIB', name:'Penutup Perlombaan HMKG Hari ke-19', loc:'BMKG Pusat & Online', status:'upcoming' },
+  { day:'19', month:'Agust', time:'08.00 WIB', name:'Puncak Acara dan Penutupan HMKG 2026', loc:'Kantor BMKG Pusat', status:'highlight' },
 ];
-const tl = document.getElementById('timelineEl');
-jadwalData.forEach((j, i) => {
-  tl.innerHTML += `<div class="tl-item" data-aos="fade-up" data-aos-delay="${i*60}">
-    <div class="tl-dot"></div>
-    <div class="tl-card">
-      <div class="tl-date">
-        <div class="tl-day">${j.day}</div>
-        <div class="tl-month">${j.month}</div>
-        <div class="tl-time">${j.time}</div>
-      </div>
-      <div class="tl-info">
-        <span class="tl-status ${j.status}">${j.status === 'highlight' ? '⭐ Acara Utama' : '📌 Upcoming'}</span>
-        <div class="tl-name">${j.name}</div>
-        <div class="tl-loc">📍 ${j.loc}</div>
-      </div>
-    </div>
-  </div>`;
+const tl = document.getElementById("timelineEl");
+
+const grouped = jadwalData.reduce((obj, item) => {
+    const key = `${item.day} ${item.month}`;
+    if (!obj[key]) obj[key] = [];
+    obj[key].push(item);
+    return obj;
+}, {});
+
+let html = "";
+let delay = 0;
+
+Object.entries(grouped).forEach(([tanggal, items]) => {
+
+    html += `
+    <div class="timeline-group">
+        <div class="timeline-heading">${tanggal}</div>
+    `;
+
+    items.forEach(j => {
+        html += `
+        <div class="tl-item" data-aos="fade-up" data-aos-delay="${delay}">
+            <div class="tl-dot"></div>
+
+            <div class="tl-card">
+                <div class="tl-date">
+                    <div class="tl-time">${j.time}</div>
+                </div>
+
+                <div class="tl-info">
+                    <span class="tl-status ${j.status}">
+                        ${j.status === "highlight"
+                            ? "⭐ Acara Utama"
+                            : "📌 Upcoming"}
+                    </span>
+
+                    <div class="tl-name">${j.name}</div>
+                    <div class="tl-loc">📍 ${j.loc}</div>
+                </div>
+            </div>
+        </div>
+        `;
+
+        delay += 60;
+    });
+
+    html += `</div>`;
 });
+
+tl.innerHTML = html;
 
 // TAHAPAN
 const steps = [
