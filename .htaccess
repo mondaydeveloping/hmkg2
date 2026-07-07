@@ -1,0 +1,30 @@
+# ==========================================================
+# .htaccess - HUT HMKG Ke-79
+# Mencegah orang membuka/menjelajah isi folder (directory listing)
+# ==========================================================
+
+# Nonaktifkan directory listing di seluruh situs
+Options -Indexes
+Options -MultiViews
+
+# Jika ada yang mencoba akses langsung ke folder assets (tanpa nama file),
+# redirect ke halaman utama / 403
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/assets/?[\s?] [NC]
+RewriteRule ^assets/?$ / [R=302,L]
+
+# Blokir akses langsung ke folder assets lewat browser (index folder),
+# tapi tetap izinkan file CSS/JS di dalamnya diambil oleh index.html
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/assets/$ [OR]
+    RewriteCond %{REQUEST_URI} ^/assets$
+    RewriteRule ^ - [F,L]
+</IfModule>
+
+# Cegah akses ke file .htaccess itu sendiri
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# Custom error page untuk akses ditolak (opsional, bisa disesuaikan)
+ErrorDocument 403 "Akses ditolak."

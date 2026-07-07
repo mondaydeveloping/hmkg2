@@ -1,0 +1,21 @@
+# ==========================================================
+# .htaccess khusus folder assets
+# Mencegah orang "masuk" (browsing) ke folder ini,
+# namun file CSS/JS di dalamnya tetap bisa dimuat oleh index.html
+# ==========================================================
+
+# Matikan directory listing
+Options -Indexes
+Options -MultiViews
+
+# Tolak akses langsung jika seseorang membuka folder ini di browser
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/assets/?$
+    RewriteRule ^ - [F,L]
+</IfModule>
+
+# Cegah akses ke file .htaccess itu sendiri
+<Files .htaccess>
+    Require all denied
+</Files>
