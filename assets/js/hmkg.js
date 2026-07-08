@@ -119,8 +119,8 @@ AOS.init({ duration: 700, once: true, offset: 60 });
         icone: 'assets/icon/Icon HMKG 2026 - E-Sport.png',
         cat: 'Hiburan',
         title: 'Lomba E-Sport',
-        flyer: 'assets/flyer/lomba e-sport.png',
-        link: '',
+        flyer: 'assets/flyer/esport.png',
+        link: 'https://link.bmkg.go.id/hmkg-esports26',
         desc: 'Turnamen game kompetitif bagi pegawai muda BMKG, menghadirkan keseruan dan kekompakan tim dalam suasana santai.'
       },
       {
@@ -129,7 +129,7 @@ AOS.init({ duration: 700, once: true, offset: 60 });
         cat: 'Hiburan',
         title: 'Lomba Karaoke / BMKG Idol',
         flyer: 'assets/flyer/bmkg_idol.png',
-        link: 'https://wa.me/+6285213240403',
+        link: 'https://link.bmkg.go.id/daftaridol',
         desc: 'Unjuk bakat menyanyi bagi pegawai BMKG dalam kompetisi karaoke yang penuh semangat dan keceriaan.'
       },
       {
