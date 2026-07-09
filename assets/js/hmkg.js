@@ -272,8 +272,8 @@ const lombaData = [
     icone: "assets/icon/Icon HMKG 2026 - Penulisan Artikel MKG.png",
     cat: "Akademik",
     title: "Lomba Penulisan Artikel MKG Populer",
-    flyer: "assets/flyer/lomba penulisan artikel mkg populer.png",
-    link: "",
+    flyer: "assets/flyer/artikel.png",
+    link: "https://link.bmkg.go.id/submitartikelhmkg79",
     desc: "Tuangkan gagasan tentang meteorologi, klimatologi, dan geofisika dalam artikel populer.",
   },
   {
