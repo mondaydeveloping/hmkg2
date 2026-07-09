@@ -147,7 +147,7 @@ const lombaData = [
     cat: "Olahraga",
     title: "Lomba Tenis Meja",
     flyer: "assets/flyer/tenis_meja.png",
-    link: "",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSf8ivilkv5Y5I77qmgLd8f_XnxGaUB2-3BvOdUy4CJaElFakA/viewform",
     desc: "Kompetisi tenis meja terbuka untuk seluruh pegawai BMKG sebagai bagian dari rangkaian olahraga HUT HMKG ke-79.",
   },
   {
