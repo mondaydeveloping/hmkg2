@@ -426,7 +426,7 @@ const galleryData = [
   { cat: "upacara", label: "Upacara Pembukaan", color: "#182168", h: 280 },
   { cat: "pembukaan", label: "Seminar Nasional", color: "#1A499A", h: 200 },
   { cat: "lomba", label: "Kompetisi Fotografi", color: "#4D99D3", h: 240 },
-  { cat: "penutupan", label: "Pameran Teknologi", color: "#8DC341", h: 180 },
+  { cat: "penutupan", label: "Penutupan", color: "#8DC341", h: 180 },
   {
     cat: "dokumentasi",
     label: "Dokumentasi Lapangan",
@@ -434,9 +434,9 @@ const galleryData = [
     h: 300,
   },
   { cat: "seminar", label: "Workshop Data Cuaca", color: "#60A945", h: 220 },
-  { cat: "lomba", label: "Presentasi KTI", color: "#182168", h: 260 },
+  { cat: "lomba", label: "Perlombaan", color: "#182168", h: 260 },
   { cat: "pembukaan", label: "Sambutan Kepala BMKG", color: "#1A499A", h: 190 },
-  { cat: "pameran", label: "Demo Peralatan", color: "#4D99D3", h: 240 },
+  { cat: "pameran", label: "Perlombaan", color: "#4D99D3", h: 240 },
   { cat: "dokumentasi", label: "Tim Panitia", color: "#FAC016", h: 200 },
   { cat: "lomba", label: "Pengumuman Pemenang", color: "#8DC341", h: 280 },
   { cat: "pameran", label: "Inovasi Peserta", color: "#182168", h: 220 },
@@ -615,9 +615,9 @@ steps.forEach((s, i) => {
 
 // STATS
 const statsData = [
-  { icon: "👥", num: 2500, suf: "+", label: "Total Peserta" },
-  { icon: "🏆", num: 8, suf: "", label: "Kategori Lomba" },
-  { icon: "🤝", num: 25, suf: "+", label: "Total Sponsor" },
+  { icon: "👥", num: 1500, suf: "+", label: "Total Peserta" },
+  { icon: "🏆", num: 21, suf: "", label: "Kategori Lomba" },
+  // { icon: "🤝", num: 25, suf: "+", label: "Total Sponsor" },
   { icon: "👁️", num: 50000, suf: "+", label: "Total Pengunjung" },
 ];
 const stg = document.getElementById("statsGrid");
