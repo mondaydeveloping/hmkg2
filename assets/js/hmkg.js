@@ -264,7 +264,7 @@ const lombaData = [
     cat: "Keagamaan",
     title: "Lomba MTQ",
     flyer: "assets/flyer/mtq.png",
-    link: "",
+    link: "link.bmkg.go.id/mtqhmkg2026",
     desc: "Rangkaian lomba bernuansa keagamaan dalam semangat Musabaqah Tilawatil Quran.",
   },
   {
@@ -282,7 +282,7 @@ const lombaData = [
     cat: "Olahraga",
     title: "Mini Soccer",
     flyer: "assets/flyer/mini_soccer.png",
-    link: "",
+    link: "https://bit.ly/hmkgminisoccertournament2026",
     desc: "Pertandingan sepak bola mini antar unit kerja BMKG.",
   },
   {
@@ -309,7 +309,7 @@ const lombaData = [
     cat: "Hiburan",
     title: "Stand Up Comedy",
     flyer: "assets/flyer/stand up comedy.png",
-    link: "",
+    link: "https://forms.gle/enhEeu87WruKT5Dw9",
     desc: "Unjuk kemampuan komedi tunggal yang menghibur sekaligus menyelipkan kisah keseharian dunia BMKG.",
   },
 
