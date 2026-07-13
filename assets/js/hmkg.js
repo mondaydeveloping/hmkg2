@@ -264,7 +264,7 @@ const lombaData = [
     cat: "Keagamaan",
     title: "Lomba MTQ",
     flyer: "assets/flyer/mtq.png",
-    link: "link.bmkg.go.id/mtqhmkg2026",
+    link: "https://link.bmkg.go.id/mtqhmkg2026",
     desc: "Rangkaian lomba bernuansa keagamaan dalam semangat Musabaqah Tilawatil Quran.",
   },
   {
