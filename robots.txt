@@ -4,3 +4,6 @@ Disallow: /assets/css/
 Disallow: /assets/js/
 
 Allow: /
+
+
+Sitemap: https://mondaydeveloping.github.io/hmkg2/sitemap.xml
