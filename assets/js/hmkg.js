@@ -218,8 +218,8 @@ const lombaData = [
     icone: "assets/icon/Icon HMKG 2026 - Mancing Mania.png",
     cat: "Hiburan",
     title: "Lomba Mancing Mania",
-    flyer: "assets/flyer/lomba mancing mania.png",
-    link: "",
+    flyer: "assets/flyer/mancing.png",
+    link: "https://link.bmkg.go.id/kiewi",
     desc: "Kegiatan memancing santai sebagai sarana refreshing dan kebersamaan antar pegawai BMKG.",
   },
   {
