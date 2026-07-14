@@ -315,7 +315,7 @@ const lombaData = [
 
   {
     icon: "📦",
-    icone: "",
+    icone: "assets/icon/Icon & Mascot HMKG 2026-Lomba Kreasi Kardus by DWP.png",
     cat: "Dharma Wanita",
     title: "Lomba Kreasi Kardus by DWP",
     flyer: "assets/flyer/kreasi_kardus.png",
@@ -324,7 +324,7 @@ const lombaData = [
   },
   {
     icon: "🍽️",
-    icone: "",
+    icone: "assets/icon/Icon & Mascot HMKG 2026-Lomba Kantin by DWP.png", 
     cat: "Dharma Wanita",
     title: "Lomba Kantin by DWP",
     flyer: "assets/flyer/kantin.png",
@@ -333,7 +333,7 @@ const lombaData = [
   },
   {
     icon: "🥗",
-    icone: "",
+    icone: "assets/icon/Icon & Mascot HMKG 2026-Lomba Sarapan Sehat by DWP.png",
     cat: "Dharma Wanita",
     title: "Lomba Sarapan Sehat by DWP",
     flyer: "assets/flyer/sarapan_sehat.png",
@@ -342,7 +342,7 @@ const lombaData = [
   },
   {
     icon: "🤸",
-    icone: "",
+    icone: "assets/icon/Icon & Mascot HMKG 2026-Lomba Senam Kreasi by DWP.png",
     cat: "Dharma Wanita",
     title: "Lomba Senam Kreasi by DWP",
     flyer: "assets/flyer/senam_kreasi.png",
@@ -351,7 +351,7 @@ const lombaData = [
   },
   {
     icon: "📣",
-    icone: "",
+    icone: "assets/icon/Icon & Mascot HMKG 2026-Lomba Yel-Yel DWP.png",
     cat: "Dharma Wanita",
     title: "Lomba Yel-Yel DWP",
     flyer: "assets/flyer/yel_yel_dwp.png",
