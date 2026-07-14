@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUT HMKG Ke-79 | Mengamati Fenomena Meteorologi, Klimatologi, dan Geofisika untuk Indonesia Berdaulat, Adil,
+    dan Makmur.</title>
+  <meta name="description"
+    content="Hari Meteorologi Klimatologi dan Geofisika ke-79 - Mengamati Fenomena Meteorologi, Klimatologi, dan Geofisika untuk Indonesia Berdaulat, Adil, dan Makmur.">
+  <meta name="author" content="Muhammad Fajarezki R">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="assets/css/hmkg.css?v=efd01bf">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#beranda">
+        <div class="nav-logo-img">
+          <!-- <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#1A499A"/>
+          <path d="M10 35 Q20 20 30 28 Q40 36 50 25" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M8 42 Q18 32 30 38 Q42 44 52 35" stroke="#8DC341" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="30" cy="18" rx="14" ry="8" fill="rgba(255,255,255,0.2)"/>
+          <path d="M22 18 Q26 14 30 16 Q34 18 38 15" stroke="white" stroke-width="1.5" fill="none"/>
+        </svg> -->
+          <img src="logo_hmkg.png" style="width:30px; height:30px;">
+        </div>
+        <div class="nav-logo-text">HMKG <span>HUT ke-79 · 2026</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#beranda" class="active">Beranda</a></li>
+        <li><a href="#lomba">Lomba</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#sponsor">Sponsor</a></li>
+        <li><a href="#jadwal">Jadwal</a></li>
+        <li><a href="#tahapan">Tahapan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1PWa3E8wAJtR7q68Lg-PoRkMHLwBZNjDm?usp=sharing"
+            target="_blank">LOGO HMKG 79</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#beranda" onclick="closeMenu()">Beranda</a>
+    <a href="#lomba" onclick="closeMenu()">Lomba</a>
+    <a href="#galeri" onclick="closeMenu()">Galeri</a>
+    <a href="#sponsor" onclick="closeMenu()">Sponsor</a>
+    <a href="#jadwal" onclick="closeMenu()">Jadwal</a>
+    <a href="#tahapan" onclick="closeMenu()">Tahapan</a>
+    <a href="" onclick="closeMenu()">Kontak</a>
+    <a href="https://drive.google.com/drive/folders/1PWa3E8wAJtR7q68Lg-PoRkMHLwBZNjDm?usp=sharing" target="_blank"
+      onclick="closeMenu()">LOGO HMKG 79</a>
+
+  </div>
+
+  <!-- HERO -->
+  <section id="beranda">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-bg-orbs">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+    <!-- Floating clouds -->
+    <div class="cloud cloud1">
+      <svg width="200" height="80" viewBox="0 0 200 80">
+        <ellipse cx="100" cy="55" rx="90" ry="25" />
+        <ellipse cx="70" cy="45" rx="50" ry="30" />
+        <ellipse cx="130" cy="48" rx="45" ry="28" />
+        <ellipse cx="100" cy="35" rx="35" ry="25" />
+      </svg>
+    </div>
+    <div class="cloud cloud2">
+      <svg width="260" height="90" viewBox="0 0 260 90">
+        <ellipse cx="130" cy="65" rx="115" ry="25" />
+        <ellipse cx="90" cy="52" rx="65" ry="35" />
+        <ellipse cx="170" cy="55" rx="58" ry="32" />
+        <ellipse cx="130" cy="40" rx="45" ry="30" />
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-grid">
+        <div class="hero-left" data-aos="fade-right">
+          <div class="hero-eyebrow">🌤 Hari Meteorologi Klimatologi dan Geofisika</div>
+          <div class="hero-subtitle-big">Selamat</div>
+          <h1 class="hero-title">HUT HMKG<br><span class="accent">Ke-79</span></h1>
+          <p class="hero-desc">Mengamati Fenomena Meteorologi, Klimatologi, dan Geofisika untuk Indonesia Berdaulat,
+            Adil, dan Makmur.
+          </p>
+
+          <div class="countdown-wrap">
+            <div class="countdown-label">⏳ Menuju Hari Puncak</div>
+            <div class="countdown" id="countdown">
+              <div class="cd-box"><span class="cd-num" id="cd-hari">00</span><span class="cd-text">Hari</span></div>
+              <div class="cd-box"><span class="cd-num" id="cd-jam">00</span><span class="cd-text">Jam</span></div>
+              <div class="cd-box"><span class="cd-num" id="cd-menit">00</span><span class="cd-text">Menit</span></div>
+              <div class="cd-box"><span class="cd-num" id="cd-detik">00</span><span class="cd-text">Detik</span></div>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#lomba" class="btn-primary">🎯 Daftar Sekarang</a>
+            <a href="#jadwal" class="btn-secondary">📅 Lihat Jadwal</a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Right -->
+        <div class="hero-visual" data-aos="fade-left">
+          <div class="hero-earth">
+            <div class="earth-ring"></div>
+            <div class="earth-ring"></div>
+            <div class="earth-ring"></div>
+            <div class="earth-core">
+              <div class="earth-land earth-land1"></div>
+              <div class="earth-land earth-land2"></div>
+              <div class="earth-land earth-land3"></div>
+              <div class="earth-atmo"></div>
+            </div>
+            <!-- Floating cards around earth -->
+            <div class="float-card card-tl">
+              <div class="fc-icon yellow">👥</div>
+              <div class="fc-info"><span class="fc-val">1.500+</span><span class="fc-lab">Peserta</span></div>
+            </div>
+            <div class="float-card card-tr">
+              <div class="fc-icon green">🏆</div>
+              <div class="fc-info"><span class="fc-val">21 Lomba</span><span class="fc-lab">Kompetisi</span></div>
+            </div>
+            <div class="float-card card-bl">
+              <div class="fc-icon sky">📍</div>
+              <div class="fc-info"><span class="fc-val">Jakarta</span><span class="fc-lab">Lokasi Event</span></div>
+            </div>
+            <div class="float-card card-br">
+              <div class="fc-icon white">📅</div>
+              <div class="fc-info"><span class="fc-val">Juli - Agustus 2026</span><span class="fc-lab">Tanggal
+                  Event</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- streaming -->
+
+  <!-- Live Streaming Section -->
+  <section class="live-stream-section" id="liveStreamSection" style="display: none;">
+    <div class="live-badge">🔴 LIVE SEKARANG</div>
+    <h2 class="live-title">Sedang Streaming!</h2>
+    <p class="live-desc">Yuk gabung nonton live streaming HMKG sekarang juga.</p>
+    <div class="live-video-wrapper">
+      <iframe id="liveVideoFrame" src="" title="YouTube Live Stream" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <a id="liveWatchLink" href="#" target="_blank" class="live-watch-btn">Tonton di YouTube</a>
+  </section>
+
+  <!-- end streaming -->
+
+
+  <!-- LOMBA -->
+  <section id="lomba">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Kompetisi Unggulan</div>
+        <h2 class="section-title">Lomba HUT HMKG Ke-79</h2>
+        <p class="section-desc">Unjuk kreativitas, inovasi, dan keahlianmu dalam rangka peringatan hari bersejarah ini.
+          Bergabunglah dan raih prestasi nasional!</p>
+      </div>
+      <div class="lomba-grid" id="lombaGrid"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeri">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Dokumentasi</div>
+        <h2 class="section-title">Galeri Kegiatan</h2>
+        <p class="section-desc">Momen-momen berkesan sepanjang perjalanan HUT HMKG — dari pembukaan hingga penghargaan.
+        </p>
+      </div>
+      <div class="gallery-filters" data-aos="fade-up">
+        <button class="gf-btn active" onclick="filterGallery('semua')">Semua</button>
+        <button class="gf-btn" onclick="filterGallery('upacara')">Upacara</button>
+        <button class="gf-btn" onclick="filterGallery('pembukaan')">Pembukaan</button>
+        <button class="gf-btn" onclick="filterGallery('lomba')">Lomba</button>
+        <button class="gf-btn" onclick="filterGallery('penutupan')">Penutupan</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- SPONSOR -->
+  <section id="sponsor">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up" style="text-align:center">
+        <div class="section-eyebrow" style="justify-content:center">Mitra & Pendukung</div>
+        <h2 class="section-title" style="text-align:center">Didukung Oleh</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center">Terima kasih kepada pihak yang telah
+          mendukung penyelenggaraan HUT HMKG Ke-79.</p>
+      </div>
+      <div class="sponsor-tier" data-aos="fade-up">
+        <div class="tier-label platinum">⭐ Platinum Sponsor</div>
+        <div class="sponsor-row">
+          <div class="sponsor-logo platinum"><span class="sponsor-placeholder" style="font-size:1.4rem">BMKG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JADWAL -->
+  <section id="jadwal">
+    <div class="section-inner" style="position:relative;z-index:1">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow" style="color:rgba(255,255,255,0.6)">Agenda</div>
+        <h2 class="section-title" style="color:#fff">Jadwal Kegiatan</h2>
+        <p class="section-desc" style="color:rgba(255,255,255,0.6)">Rangkaian acara HUT HMKG Ke-79 yang akan mengisi
+          hari-hari bersejarah ini.</p>
+      </div>
+      <div class="timeline" id="timelineEl"></div>
+    </div>
+  </section>
+
+  <!-- TAHAPAN -->
+  <section id="tahapan">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up" style="text-align:center">
+        <div class="section-eyebrow" style="justify-content:center">Alur Pendaftaran</div>
+        <h2 class="section-title" style="text-align:center">Tahapan Kegiatan</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center">Ikuti langkah-langkah berikut untuk
+          berpartisipasi dalam HUT HMKG Ke-79.</p>
+      </div>
+      <div class="steps-grid" id="stepsGrid" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <!-- STATISTICS -->
+  <section id="statistik">
+    <div class="section-inner">
+      <div class="stats-grid" id="statsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontak">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Hubungi Kami</div>
+        <h2 class="section-title">Kontak & Lokasi</h2>
+        <p class="section-desc">Ada pertanyaan? Tim kami siap membantu kamu 24/7.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" data-aos="fade-up">
+          <div class="cc-icon">📞</div>
+          <div class="cc-title">Contact Person</div>
+          <div class="cc-val">Panitia HUT HMKG Ke-79<br><a href="tel:+6285213240403">0852-1324-0403</a></div>
+        </div>
+        <div class="contact-card" data-aos="fade-up">
+          <div class="cc-icon">📞</div>
+          <div class="cc-title">Contact Person</div>
+          <div class="cc-val">Panitia HUT HMKG Ke-79<br><a href="tel:+6282368844814">0823-6884-4814</a></div>
+        </div>
+
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cc-icon">📧</div>
+          <div class="cc-title">Email Resmi</div>
+          <div class="cc-val"><a href="mailto:hut79@bmkg.go.id">hut79@bmkg.go.id</a><br>Respon dalam 1×24 jam</div>
+        </div>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cc-icon">💬</div>
+          <div class="cc-title">WhatsApp</div>
+          <div class="cc-val"><a href="https://wa.me/6285213240403">0852-1324-0403</a><br>Chat langsung panitia</div>
+        </div>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cc-icon">📍</div>
+          <div class="cc-title">Lokasi Kegiatan</div>
+          <div class="cc-val">Kantor Pusat BMKG<br>Jl. Angkasa I No. 2, Jakarta Pusat</div>
+        </div>
+        <div
+          class="contact-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cc-icon">📥</div>
+          <div class="cc-title"><b>Logo HMKG 79</b></div>
+          <a href="https://drive.google.com/drive/folders/1PWa3E8wAJtR7q68Lg-PoRkMHLwBZNjDm?usp=sharing" class="cc-val">Download Icon & Logo HMKG Disini</a>
+      </div>
+        <div class="contact-card"
+          data-aos="fade-up" data-aos-delay="300" target="_blank" rel="noopener noreferrer">
+          <div class="cc-icon">
+            <img src="assets/icon/instagram.png" alt="Instagram" width="30px" height="30px">
+          </div>
+          <div class="cc-title"><b>Instagram HMKG</b></div>
+          <a href="https://www.instagram.com/hmkg.2026?utm_source=qr&igsh=aGIyMmp5cGl3OW14" class="cc-val">Kunjungi Instagram Kami</a>
+        </div>
+        <div class="map-placeholder" data-aos="fade-up">
+          <div class="map-dot"></div>
+          <div class="map-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A499A" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+            <p>Kantor Pusat BMKG — Jakarta Pusat<br><strong style="color:#1A499A">Jl. Angkasa I No. 2,
+                Kemayoran</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-row" style="margin-bottom:1rem">
+            <div class="footer-logo-box">
+              <!-- <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <circle cx="30" cy="30" r="28" fill="#1A499A"/>
+              <path d="M10 35 Q20 20 30 28 Q40 36 50 25" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M8 42 Q18 32 30 38 Q42 44 52 35" stroke="#8DC341" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <ellipse cx="30" cy="18" rx="14" ry="8" fill="rgba(255,255,255,0.2)"/>
+            </svg> -->
+              <img src="logo_hmkg.png" style="width:30px; height:30px;">
+            </div>
+            <div class="footer-brand-text">HMKG<span>HUT ke-79 · 2026</span></div>
+          </div>
+          <p>Peringatan Hari Meteorologi Klimatologi dan Geofisika ke-79. Mengamati Hari ini, Melindungi Masa Depan,
+            demi Indonesia Maju.</p>
+          <div class="social-links">
+            <a class="social-link" href="#" title="Instagram">📸</a>
+            <a class="social-link" href="#" title="Twitter/X">🐦</a>
+            <a class="social-link" href="#" title="YouTube">▶️</a>
+            <a class="social-link" href="#" title="TikTok">🎵</a>
+            <a class="social-link" href="#" title="Facebook">👥</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#lomba">Lomba</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#jadwal">Jadwal</a></li>
+            <li><a href="#tahapan">Tahapan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kompetisi</h4>
+          <ul>
+            <li><a href="#lomba">Fotografi</a></li>
+            <li><a href="#lomba">Poster Digital</a></li>
+            <li><a href="#lomba">Video Kreatif</a></li>
+            <li><a href="#lomba">Karya Tulis</a></li>
+            <li><a href="#lomba">Data Cuaca</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tautan</h4>
+          <ul>
+            <li><a href="https://www.bmkg.go.id" target="_blank">bmkg.go.id</a></li>
+            <li><a href="#">Tentang HMKG</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#kontak">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 HUT HMKG Ke-79. Mengamati Fenomena Meteorologi, Klimatologi, dan Geofisika untuk Indonesia Berdaulat,
+          Adil, dan Makmur.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Syarat Penggunaan</a>
+          <a href="https://www.bmkg.go.id">bmkg.go.id</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+
+      <button class="modal-close" onclick="closeModal(event,true)">✕</button>
+
+      <img id="modalFlyer" class="modal-flyer" alt="Flyer">
+
+      <div id="modalIcon" class="modal-icon"></div>
+
+      <div id="modalCat" class="modal-cat"></div>
+
+      <div id="modalTitle" class="modal-title"></div>
+
+      <div id="modalDesc" class="modal-desc"></div>
+
+      <a id="modalLink" class="modal-btn" href="#" target="_blank" rel="noopener noreferrer">
+        Daftar Sekarang
+      </a>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lb-close" onclick="closeLightbox()">✕</span>
+    <div class="lb-nav lb-prev" onclick="lbPrev()">‹</div>
+    <img id="lbImg" src="" alt="">
+    <div class="lb-nav lb-next" onclick="lbNext()">›</div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/hmkg.js?v=efd01bf"></script>
+</body>
+
+</html>
