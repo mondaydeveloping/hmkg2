@@ -236,8 +236,8 @@ const lombaData = [
     icone: "assets/icon/Icon HMKG 2026 - Virtual Run.png",
     cat: "Olahraga",
     title: "Lomba Virtual Run",
-    flyer: "assets/flyer/lomba virtual run.png",
-    link: "",
+    flyer: "assets/flyer/virtualrun.png",
+    link: "https://bmkgvirtualrun.id/register",
     desc: "Lari virtual yang dapat diikuti pegawai BMKG dari berbagai lokasi, mendukung gaya hidup sehat dan aktif.",
   },
   {
